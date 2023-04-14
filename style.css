@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@100&family=Public+Sans&display=swap");
+body {
+  font-family: "Public Sans", sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-left {
+  margin-top: 12px;
+  margin-left: 18px;
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  height: 32px;
+  width: 36px;
+}
+
+.top-left span {
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 24px;
+}
+
+.top-right {
+  justify-content: space-between;
+  display: inherit;
+}
+
+.top-right button {
+  margin-top: 13px;
+  margin-left: 37px;
+  padding: 9px;
+  font-size: 14px;
+  font-family: "Public Sans", sans-serif;
+  border: 0px;
+  color: rgb(68, 68, 68);
+  background-color: white;
+  border-radius: 5px;
+}
+
+.top-right .create-form button:hover {
+  opacity: 0.75;
+}
+
+.top-right button:hover {
+  background-color: rgb(241, 241, 241);
+  color: rgb(0, 0, 0);
+}
+.top-right .create-form button {
+  background-color: rgb(248, 28, 229);
+  color: white;
+  font-weight: bold;
+}
