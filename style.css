@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@100&family=Public+Sans&display=swap");
-body {
+* {
   font-family: "Public Sans", sans-serif;
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
 }
 
 header {
@@ -30,16 +31,16 @@ header {
 }
 
 .top-right {
-  justify-content: space-between;
-  display: inherit;
+  justify-content: space-around;
+  display: flex;
+  padding-right: 19px;
 }
 
 .top-right button {
   margin-top: 13px;
-  margin-left: 37px;
+  margin-left: 31px;
   padding: 9px;
   font-size: 14px;
-  font-family: "Public Sans", sans-serif;
   border: 0px;
   color: rgb(68, 68, 68);
   background-color: white;
@@ -58,4 +59,61 @@ header {
   background-color: rgb(248, 28, 229);
   color: white;
   font-weight: bold;
+}
+
+.central {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#imgcentral {
+  padding-top: 17px;
+  width: 562px;
+  height: 519px;
+}
+
+/* .central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.texts {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+}
+.txt-1 {
+  font-size: 64px;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.txt-2 {
+  font-size: 20px;
+}
+
+.rosa {
+  color: rgb(248, 28, 229);
+}
+
+.central button {
+  padding: 13px 24px;
+  margin-top: 43px;
+  border-radius: 8px;
+  font-size: 17px;
+  color: white;
+  background-color: #000;
+  font-weight: bold;
+}
+
+.central button:hover {
+
+  
+}
+.txt-3 {
+  font-size: 13px;
+  color: rgb(119, 119, 119);
+  margin-top: 9px;
 }
