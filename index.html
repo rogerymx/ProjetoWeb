@@ -17,25 +17,45 @@
       <span>Tally</span>
     </div><!-- top-left -->
     <div class="top-right">
-      <button id="pricing">Pricing</button>
-      <button>Log in</button>
-      <button>Sign up</button>
       <div class="create-form">
         <button>Create form</button>
       </div> <!--create-form -->
     </div><!-- top-right -->
   </header>
-  <div class="central">
+  <div class="container">
+    <h1>Sistema CRUD</h1>
+    <form id="postForm">
+      <label for="titulo">Título:</label>
+      <input type="text" id="titulo" required>
+      <label for="imagem">Imagem URL:</label>
+      <input type="text" id="imagem" required>
+
+      <label for="data">Data:</label>
+    <input type="date" id="data" required>
+
+    <label for="conteudo">Conteúdo:</label>
+    <textarea id="conteudo" required></textarea>
+
+    <button type="submit">Adicionar</button>
+  </form>
+
+  <h2>Busca de Postagens</h2>
+  <input type="text" id="searchInput" placeholder="Buscar por título ou conteúdo">
+  
+  </div>
+  <div id="postagens"></div>
+
+  <!-- <div class="central">
     <img src="img/central.png" id="imgcentral">
     <div class="texts">
       <h1 class="txt-1">The simplest way to create forms</h1>
       <p class="txt-2"> Create forms for all purposes in seconds.</p>
       <p class="txt-2">Without knowing how to code, <span class="txt-2 rosa">and for free!</span>
-      </p><!-- txt-2  -->
+      </p>
       <button>Create form</button>
       <p class="txt-3">No signup required</p>
-    </div><!-- texts  -->
-  </div> <!-- central -->
+    </div>
+  </div> 
   <footer>
     <img src="img/bot.png" id="bot">
     <img src="img/botton-full.png" id="botton-full">
@@ -43,7 +63,20 @@
   </footer>
   <div class="bot-right">
     <img src="img/bot-right.png" id="bot-right">
-  </div>
+  </div> -->
+  <!-- <div class="container">
+    <div class="post-form">
+      <h2>Inserir Postagem</h2>
+      <input type="text" id="titulo" placeholder="Título" />
+      <textarea id="contexto" placeholder="Contexto textual"></textarea>
+      <input type="file" id="imagem" accept="image/*" />
+      <button onclick="inserirPostagem()">Inserir</button>
+    </div>
+
+    <h2>Postagens</h2>
+    <ul class="post-list" id="post-list"></ul>
+  </div> -->
 </body>
+<script src="script.js"></script>
 
 </html>

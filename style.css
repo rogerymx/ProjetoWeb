@@ -36,22 +36,27 @@ header {
   padding-right: 19px;
 }
 
-.top-right button {
+button {
   margin-top: 13px;
-  margin-left: 31px;
+
   padding: 9px;
   font-size: 14px;
-  border: 0px;
+  border: 2px solid rgb(241, 241, 241);
   color: rgb(68, 68, 68);
   background-color: white;
   border-radius: 5px;
+}
+
+.button-delete:hover{
+  transition: all .3s ease-in;
+  background-color: crimson;
 }
 
 .top-right .create-form button:hover {
   opacity: 0.75;
 }
 
-.top-right button:hover {
+button:hover {
   background-color: rgb(241, 241, 241);
   color: rgb(0, 0, 0);
 }
@@ -114,24 +119,6 @@ header {
   margin-top: 9px;
 }
 
-footer {
-  display: flex;
-  margin-top: 44px;
-  justify-content: center;
-}
-h2 {
-  display: none;
-}
-#botton-full {
-  display: none;
-}
-
-.bot-right {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-}
-
 @media (max-width: 1300px) {
   #bot {
     width: 1000px;
@@ -192,4 +179,56 @@ h2 {
     display: flex;
     padding-top: 25px;
   }
+}
+
+h1, h2{
+  padding: 1rem 0;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  border-radius: .25rem;
+  padding: .5rem .25rem;
+  margin: .5rem 0;
+  display: block;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+
+#postagens {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.postagem {
+  max-width: 60%;
+  border: 1px solid #222;
+  border-radius: 1rem;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.postagem button {
+  margin-left: 10px;
+}
+
+img{
+  max-width: 100%;
+}
+
+.container{
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
