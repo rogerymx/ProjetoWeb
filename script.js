@@ -8,36 +8,74 @@ function adicionarPostagem(event) {
   var data = document.getElementById('data').value;
   var conteudo = document.getElementById('conteudo').value;
 
-  if(titulo.length >= 3 && titulo.length != null &&
-    imagem.length >= 3 && imagem.length != null &&
-    data.length >= 3 && data.length != null &&
-    conteudo.length >= 3 && conteudo.length != null){
-      // Cria um objeto postagem com os valores
-      var postagem = {
-        titulo: titulo,
-        imagem: imagem,
-        data: data,
-        conteudo: conteudo
-      };
-    
-      // Verifica se já existem postagens no Local Storage
-      var postagens = JSON.parse(localStorage.getItem('postagens')) || [];
-    
-      // Adiciona a nova postagem à lista de postagens
-      postagens.push(postagem);
-    
-      // Salva a lista de postagens atualizada no Local Storage
-      localStorage.setItem('postagens', JSON.stringify(postagens));
-    
-      // Limpa os campos de input
-      document.getElementById('titulo').value = '';
-      document.getElementById('imagem').value = '';
-      document.getElementById('data').value = '';
-      document.getElementById('conteudo').value = '';
+  var tituloInput = document.getElementById('titulo');
+  var imagemInput = document.getElementById('imagem');
+  var dataInput = document.getElementById('data');
+  var conteudoInput = document.getElementById('conteudo');
 
-      exibirPostagens();
-  }else{
-    alert("Preencha todos os campos!");
+  if (
+    titulo.length >= 3 &&
+    imagem.length >= 3 &&
+    data.length >= 3 &&
+    conteudo.length >= 3
+  ) {
+    // Cria um objeto postagem com os valores
+    var postagem = {
+      titulo: titulo,
+      imagem: imagem,
+      data: data,
+      conteudo: conteudo,
+    };
+
+    // Verifica se já existem postagens no Local Storage
+    var postagens = JSON.parse(localStorage.getItem('postagens')) || [];
+
+    // Adiciona a nova postagem à lista de postagens
+    postagens.push(postagem);
+
+    // Salva a lista de postagens atualizada no Local Storage
+    localStorage.setItem('postagens', JSON.stringify(postagens));
+
+    // Limpa os campos de input
+    tituloInput.value = '';
+    imagemInput.value = '';
+    dataInput.value = '';
+    conteudoInput.value = '';
+
+    // Remove as classes de validação dos campos
+    tituloInput.classList.remove('invalid');
+    imagemInput.classList.remove('invalid');
+    dataInput.classList.remove('invalid');
+    conteudoInput.classList.remove('invalid');
+
+    exibirPostagens();
+  } else {
+    // Adiciona as classes de validação aos campos não preenchidos corretamente
+    if (titulo.length < 3) {
+      tituloInput.classList.add('invalid');
+    } else {
+      tituloInput.classList.remove('invalid');
+    }
+
+    if (imagem.length < 3) {
+      imagemInput.classList.add('invalid');
+    } else {
+      imagemInput.classList.remove('invalid');
+    }
+
+    if (data.length < 3) {
+      dataInput.classList.add('invalid');
+    } else {
+      dataInput.classList.remove('invalid');
+    }
+
+    if (conteudo.length < 3) {
+      conteudoInput.classList.add('invalid');
+    } else {
+      conteudoInput.classList.remove('invalid');
+    }
+
+    alert('Preencha todos os campos em vermelho corretamente. Obs: Necessita de mais de 3 caracteres');
   }
 }
 
